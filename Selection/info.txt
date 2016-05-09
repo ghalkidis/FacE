@@ -1,0 +1,9 @@
+need library: 
+
+SFML
+
+"apt-get install libsfml-dev"
+-----------------------------------
+to compile in CLI
+
+g++ main.cpp -o sfml-app -lsfml-audio -lsfml-system
