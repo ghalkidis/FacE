@@ -31,9 +31,7 @@ class FacEFrame: public wxFrame
         //(*Handlers(FacEFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
-        void OnButton1Select(wxCommandEvent& event);
-        void OnButton2Select(wxCommandEvent& event);
-        void OnButton3Select(wxCommandEvent& event);
+        int OnButtonSelect(wxCommandEvent& event);
 
         //*)
 
@@ -47,6 +45,9 @@ class FacEFrame: public wxFrame
         static const long ID_BUTTON111;
         static const long ID_BUTTON222;
         static const long ID_BUTTON333;
+        static const long ID_BUTTON1111;
+        static const long ID_BUTTON2222;
+        static const long ID_BUTTON3333;
         static const long ID_PANEL1;
         static const long ID_MENUITEM1;
         static const long idMenuAbout;
@@ -58,10 +59,19 @@ class FacEFrame: public wxFrame
         wxPanel* Panel1;
         wxButton* Button2;
         wxButton* Button3;
+        wxButton* Button11;
+        wxButton* Button22;
+        wxButton* Button33;
+        wxButton* Button111;
+        wxButton* Button222;
+        wxButton* Button333;
+        wxButton* Button1111;
+        wxButton* Button2222;
+        wxButton* Button3333;
         wxStatusBar* StatusBar1;
         //*)
 bool face; //happy=0, sad=1, disgust=2
-bool mouth; //0=open/select, 1=right/move right, 2=left/move left
+bool eye; //0=open/select, 1=right/move right, 2=left/move left
 int n; //incrimenter for loops
         DECLARE_EVENT_TABLE()
 };
